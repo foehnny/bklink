@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-  <meta charset="utf-8">
-  <title>Connecting...</title>
-  </head>
-  <body>
-  <p>Redirecting...</p>
-  <a id="go" href="#">tap here</a>
-  <script>
-    var target = "rdp://";
+<html>
+<head>
+<meta charset="utf-8">
+<title>Connecting...</title>
+</head>
+<body>
+<p>Redirecting...</p>
+<a id="go" href="#">tap here</a>
+<script>
+var params = new URLSearchParams(window.location.search);
+var target = params.get("u") || "rdp://";
 document.getElementById("go").href = target;
 window.location.href = target;
 </script>
-  </body>
-  </html>
-  
+</body>
+</html>
